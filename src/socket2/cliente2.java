@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class cliente2 {
 
     public static void main(String[] args) throws IOException {
-        System.out.println("!!!!CLIENTE!!!!");
+        System.out.println("******CLIENTE******");
 
         Socket cliente = new Socket("localhost", 50708);
 
@@ -22,7 +22,5 @@ public class cliente2 {
         regiao.writeUTF(new Scanner(System.in).nextLine());
         System.out.println("Valor do veiculo:");
         valor.writeDouble(new Scanner(System.in).nextDouble());
-
     }
-
 }
