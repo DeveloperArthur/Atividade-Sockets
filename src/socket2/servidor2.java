@@ -1,29 +1,16 @@
-/*2. Seguro veicular: implemente a lógica no
-Servidor para calcular o valor do seguro
-do veículo, recebendo para tal o ano do
-veículo, região de São Paulo onde reside
-o dono do veículo e seu valor.
-Atividade
-a) Para veículos até 2005, o valor do seguro
-correspoderá a 15% do valor do veículo.
-b) Para veículos de 2006 até 2014, o valor do
-seguro correspoderá a 10% do valor do
-veículo.
-c) Para veículos a partir de 2014, o valor do
-seguro correspoderá a 5% do valor do
-veículo.
-Atividade
-d) Para cada região de São Paulo deverá ser
-adicionada uma taxa extra sobre o valor do
-seguro. Para tal, siga a tabela abaixo:
-Atividade
+/*Seguro veicular: implemente a lógica no Servidor para calcular o valor do seguro
+do veículo, recebendo para tal o ano do veículo, região de São Paulo onde reside
+o dono do veículo e seu valor. Para veículos até 2005, o valor do seguro
+correspoderá a 15% do valor do veículo. Para veículos de 2006 até 2014, o valor do
+seguro correspoderá a 10% do valor do veículo. Para veículos a partir de 2014, o valor do
+seguro correspoderá a 5% do valor do veículo. Para cada região de São Paulo deverá ser
+adicionada uma taxa extra sobre o valor do seguro. Para tal, siga a tabela abaixo:
 Região Valor da Taxa
 Zona Sul R$ 500,00
 Zona Oeste R$ 350,00
 Zona Leste R$ 600,00
 Zona Norte R$ 250,00
-e) Este método deve retornar o valor do
-seguro.*/
+Este método deve retornar o valor do seguro.*/
 package socket2;
 
 import java.io.DataInputStream;
@@ -40,6 +27,7 @@ public class servidor2 {
         double valorConvertido = 0, valorseg = 0;
 
         System.out.println("***SERVIDOR***");
+        
         ServerSocket servidor = new ServerSocket(50708);
         Socket cliente = servidor.accept();
 
@@ -74,8 +62,6 @@ public class servidor2 {
             valorseg = valorseg + 250;
         }
 
-        System.out.println("Valor do seguro :" + valorseg);
-
+        System.out.println("Valor do seguro: " + valorseg);
     }
-
 }
