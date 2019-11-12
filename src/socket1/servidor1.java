@@ -36,9 +36,7 @@ public class servidor1 {
         financiamento = valorConvertido - valorEntrada;
         if (valorEntrada >= (valorConvertido * 0.5)) {
             financiamento = financiamento * 0.35;
-        }
-
-        if (valorEntrada < (valorConvertido * 0.5)) {
+        }else if (valorEntrada < (valorConvertido * 0.5)) {
             financiamento = financiamento * 0.45;
         }
 
