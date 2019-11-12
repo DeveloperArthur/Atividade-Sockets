@@ -38,27 +38,24 @@ public class servidor2 {
         anoConvertido = ano.readInt();
         regiaoConvertida = regiao.readUTF();
         valorConvertido = valor.readDouble();
-
+        
+        //verificando ano do carro
         if (anoConvertido <= 2005) {
             valorseg = valorConvertido * 0.15;
-        }
-        if (anoConvertido >= 2006 && anoConvertido < 2014) {
+        }else if (anoConvertido >= 2006 && anoConvertido < 2014) {
             valorseg = valorConvertido * 0.1;
-        }
-        if (anoConvertido >= 2014) {
+        }else if (anoConvertido >= 2014) {
             valorseg = valorConvertido * 0.05;
         }
-
+        
+        //verificando regiao
         if (regiaoConvertida.equals("ZS")) {
             valorseg = valorseg + 500;
-        }
-        if (regiaoConvertida.equals("ZO")) {
+        }else if (regiaoConvertida.equals("ZO")) {
             valorseg = valorseg + 350;
-        }
-        if (regiaoConvertida.equals("ZL")) {
+        }else if (regiaoConvertida.equals("ZL")) {
             valorseg = valorseg + 600;
-        }
-        if (regiaoConvertida.equals("ZN")) {
+        }else if (regiaoConvertida.equals("ZN")) {
             valorseg = valorseg + 250;
         }
 
