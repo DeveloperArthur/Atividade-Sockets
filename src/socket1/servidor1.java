@@ -1,10 +1,10 @@
-/*Financiamento de veículos: implemente a lógica no Servidor para verificar se o financiamento de um
-veículo será aprovado, recebendo para tal o valor do veículo, o valor da entrada e a quantidade 
-de tempo (em meses) que o cliente deseja financiar o veículo. Considere que a financiadora adota um
-acréscimo (juros) de 35% sobre o valor financiado, caso a entrada seja superior ou igual 50% do valor 
-do veículo. Caso a entrada seja inferior a 50% do valor do veículo, o juros serão de 45% sobre o
-valor financiado. Este método deve retornar o valor das
-parcelas deste financiamento.*/
+/*Financiamento de veículos: implemente a lógica no Servidor para verificar se o 
+financiamento de um veículo será aprovado, recebendo para tal o valor do veículo, 
+o valor da entrada e a quantidade de tempo (em meses) que o cliente deseja financiar 
+o veículo. Considere que a financiadora adota um acréscimo (juros) de 35% sobre o valor 
+financiado, caso a entrada seja superior ou igual 50% do valor do veículo. Caso a entrada 
+seja inferior a 50% do valor do veículo, o juros serão de 45% sobre o valor financiado. 
+Este método deve retornar o valor das parcelas deste financiamento.*/
 package socket1;
 
 import java.io.DataInputStream;
