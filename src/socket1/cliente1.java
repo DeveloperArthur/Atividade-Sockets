@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class cliente1 {
     
     public static void main(String[] args) throws IOException {
-        System.out.println("!!!!CLIENTE!!!!");
+        System.out.println("******CLIENTE******");
 
         Socket cliente = new Socket("localhost", 50707);
 
