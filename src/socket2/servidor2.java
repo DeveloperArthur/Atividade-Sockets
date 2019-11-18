@@ -14,6 +14,7 @@ Este método deve retornar o valor do seguro.*/
 package socket2;
 
 import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -34,7 +35,8 @@ public class servidor2 {
         DataInputStream ano = new DataInputStream(cliente.getInputStream());
         DataInputStream regiao = new DataInputStream(cliente.getInputStream());
         DataInputStream valor = new DataInputStream(cliente.getInputStream());
-
+        DataOutputStream enviaParaCliente = new DataOutputStream(cliente.getOutputStream());
+        
         anoConvertido = ano.readInt();
         regiaoConvertida = regiao.readUTF();
         valorConvertido = valor.readDouble();
@@ -58,7 +60,7 @@ public class servidor2 {
         }else if (regiaoConvertida.equals("ZN")) {
             valorseg = valorseg + 250;
         }
-
-        System.out.println("Valor do seguro: " + valorseg);
+        
+        enviaParaCliente.writeDouble(valorseg);
     }
 }

@@ -28,7 +28,8 @@ public class servidor1 {
         DataInputStream entrada = new DataInputStream(cliente.getInputStream());
         DataInputStream valor = new DataInputStream(cliente.getInputStream());
         DataInputStream tempo = new DataInputStream(cliente.getInputStream());
-
+        DataOutputStream enviaParaCliente = new DataOutputStream(cliente.getOutputStream());
+        
         valorConvertido = valor.readDouble();
         valorEntrada = entrada.readDouble();
         tempoAux = tempo.readInt();
@@ -39,7 +40,7 @@ public class servidor1 {
         }else if (valorEntrada < (valorConvertido * 0.5)) {
             financiamento = financiamento * 0.45;
         }
-
-        System.out.println("valor das parcela do finaciamento " + financiamento / tempoAux);
+        
+        enviaParaCliente.writeDouble(financiamento / tempoAux);
     }
 }
